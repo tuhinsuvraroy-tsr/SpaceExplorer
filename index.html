@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planetary Gravity & Physics Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+    <header class="glass-header">
+        <h1>Planetary Gravity & Physics Explorer</h1>
+    </header>
+
+    <main class="container">
+        <section class="control-panel glass-panel">
+            <div class="input-group">
+                <label for="celestial-body">Select Celestial Body:</label>
+                <div class="select-wrapper">
+                    <select id="celestial-body" disabled>
+                        <option value="">Loading data...</option>
+                    </select>
+                </div>
+            </div>
+            <div id="loading-indicator" class="loading">Fetching astronomical data...</div>
+            <div id="error-message" class="error hidden">Failed to load data. Please try again later.</div>
+        </section>
+
+        <section class="data-card glass-panel hidden" id="data-card">
+            <h2 id="body-name" class="glow-text">Earth</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-label">Gravity</span>
+                    <span class="stat-value" id="stat-gravity">-- m/s²</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Escape Velocity</span>
+                    <span class="stat-value" id="stat-escape">-- m/s</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Mean Radius</span>
+                    <span class="stat-value" id="stat-radius">-- km</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Density</span>
+                    <span class="stat-value" id="stat-density">-- g/cm³</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="calculator-section glass-panel hidden" id="calculator-section">
+            <h3>Rocket Payload Calculator</h3>
+            <div class="calc-input">
+                <div class="input-group">
+                    <label for="payload-mass">Enter Payload Mass (kg):</label>
+                    <input type="number" id="payload-mass" placeholder="e.g., 1000" min="0" step="any">
+                </div>
+            </div>
+            <div class="calc-result">
+                <h4>Weight on <span id="weight-body-name">Target</span></h4>
+                <div class="weight-display glow-text" id="weight-result">0.00 N</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <p>Data provided by <a href="https://api.le-systeme-solaire.net/" target="_blank">The Solar System OpenData API</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
