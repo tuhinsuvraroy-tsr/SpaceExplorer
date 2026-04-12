@@ -23,18 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function init() {
         try {
-            const apiUrl = 'https://corsproxy.io/?url=' + encodeURIComponent('https://api.le-systeme-solaire.net/rest/bodies/');
-            const response = await fetch(apiUrl, {
-                headers: {
-                    'Authorization': 'Bearer 37cff98e-4e53-41e4-a3f7-1efa44568069'
-                }
-            });
+            const apiUrl = 'https://api.npoint.io/a8a6a67a49f9259a73c4/bodies';
+            const response = await fetch(apiUrl);
             if (!response.ok) throw new Error('Network response was not ok');
             
             const data = await response.json();
             
 
-            celestialBodiesData = data.bodies.filter(body => {
+            celestialBodiesData = data.filter(body => {
                 return body.isPlanet || notableMoons.includes(body.englishName);
             });
 
