@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function init() {
         try {
-            const apiUrl = 'https://api.le-systeme-solaire.net/rest/bodies/';
-            const response = await fetch('https://corsproxy.io/?' + encodeURIComponent(apiUrl), {
+            const apiUrl = 'https://corsproxy.io/?url=' + encodeURIComponent('https://api.le-systeme-solaire.net/rest/bodies/');
+            const response = await fetch(apiUrl, {
                 headers: {
                     'Authorization': 'Bearer 37cff98e-4e53-41e4-a3f7-1efa44568069'
                 }
