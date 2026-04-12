@@ -43,4 +43,6 @@ Because this project uses vanilla web technologies, setup is instantaneous.
 
 ## 📡 API Reference
 
-This project is powered by [The Solar System OpenData API](https://api.npoint.io/a8a6a67a49f9259a73c4). It retrieves the `rest/bodies/` endpoint to populate the dropdown and data cards dynamically.
+This project is powered by The Solar System OpenData API. It retrieves the `rest/bodies/` endpoint to populate the dropdown and data cards dynamically.
+
+Website Link - https://solarsystemexplorerbynewton.netlify.app/
