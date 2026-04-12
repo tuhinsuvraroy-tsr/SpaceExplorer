@@ -1,4 +1,4 @@
-# SpaceExplorer 🌌
+new# SpaceExplorer 🌌
 
 A dynamic, interactive web application that allows users to explore the physical characteristics of celestial bodies in our solar system. The app fetches real-time astronomical data and features a built-in physics calculator to determine how much a specific payload would weigh on different planets and moons.
 
